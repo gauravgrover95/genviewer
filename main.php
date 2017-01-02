@@ -1,5 +1,9 @@
 <?php
 
+do {
+
+
+
 $filename = "src/gnome.txt";
 $file = fopen( $filename, "r" );
 
@@ -22,7 +26,7 @@ $txt2 = "";
 
 for($i = $m; $i <= $n; $i++) {
    $txt1 .= sprintf("%02d", $i) . " - " . $filetext[$i-1] . "\n";
-   $txt2 .= $filetext[$i];
+   $txt2 .= $filetext[$i-1];
 }
 
 
@@ -58,49 +62,51 @@ echo "\nOK! We are done. Go check your 'results' folder.\n\n";
 // echo ":) Thanks for using me\n\n";
 
 
-$r = readline("Do you want me to print the results?(y/n)");
+// $r = readline("Do you want me to print the results?(y/n)");
 
-if($r != 'y') if($r == 'n') die("Okay Goodbye! :)"); else die("Incorrect choice");
+// if($r != 'y') if($r == 'n') die("Okay Goodbye! :)"); else die("Incorrect choice");
 
-$p = readline("Which one?(plain/inline)");
+// $p = readline("Which one?(plain/inline)");
 
-if($p == "plain") {
-	$filename = "results/plain.txt";
-	$file = fopen( $filename, "r" );
+// if($p == "plain") {
+// 	$filename = "results/plain.txt";
+// 	$file = fopen( $filename, "r" );
 
-	if( $file == false ) {
-	   echo ( "Error in opening file" );
-	   exit();
-	}
+// 	if( $file == false ) {
+// 	   echo ( "Error in opening file" );
+// 	   exit();
+// 	}
 
-	$filesize = filesize( $filename );
-	$filetext = fread( $file, $filesize );
+// 	$filesize = filesize( $filename );
+// 	$filetext = fread( $file, $filesize );
 
-	echo "$filetext";
+// 	echo "$filetext";
 
-	fclose( $file );
-	exit();
-}
+// 	fclose( $file );
+// 	exit();
+// }
 
-if($p == "inline") {
-	$filename = "results/inline.txt";
-	$file = fopen( $filename, "r" );
+// if($p == "inline") {
+// 	$filename = "results/inline.txt";
+// 	$file = fopen( $filename, "r" );
 
-	if( $file == false ) {
-	   echo ( "Error in opening file" );
-	   exit();
-	}
+// 	if( $file == false ) {
+// 	   echo ( "Error in opening file" );
+// 	   exit();
+// 	}
 
-	$filesize = filesize( $filename );
-	$filetext = fread( $file, $filesize );
+// 	$filesize = filesize( $filename );
+// 	$filetext = fread( $file, $filesize );
 
-	echo "$filetext";
+// 	echo "$filetext";
 
-	fclose( $file );
-	exit();
-}
-
-
+// 	fclose( $file );
+// 	exit();
+// }
 
 
-die("Incorrect Choice");
+
+
+// die("Incorrect Choice");
+
+} while(1);
